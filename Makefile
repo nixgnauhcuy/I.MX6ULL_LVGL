@@ -4,6 +4,7 @@
 CC 				= arm-linux-gnueabihf-gcc
 LVGL_DIR_NAME 	?= lvgl
 LVGL_DIR 		?= .
+EXAMPLE_DIR 	?= examples
 
 WARNINGS		:= -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers -Wall -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith \
 					-fno-strict-aliasing -Wno-error=cpp -Wuninitialized -Wmaybe-uninitialized -Wno-unused-parameter -Wno-missing-field-initializers -Wtype-limits \
@@ -28,6 +29,7 @@ MAINSRC 		= ./main.c
 
 include $(LVGL_DIR)/lvgl/lvgl.mk
 include $(LVGL_DIR)/lv_drivers/lv_drivers.mk
+include ./$(EXAMPLE_DIR)/examples.mk
 
 CSRCS 			+= # $(LVGL_DIR)/mouse_cursor_icon.c 
 
@@ -50,7 +52,7 @@ $(BUILD_OBJ_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "CC $<"
-    
+
 default: $(TARGET)
 	@mkdir -p $(dir $(BUILD_BIN_DIR)/)
 	$(CC) -o $(BUILD_BIN_DIR)/$(BIN) $(TARGET) $(LDFLAGS)

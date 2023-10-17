@@ -1,11 +1,12 @@
 #include "lvgl/lvgl.h"
-#include "lvgl/demos/lv_demos.h"
 #include "lv_drivers/display/fbdev.h"
 #include "lv_drivers/indev/evdev.h"
 #include <unistd.h>
 #include <pthread.h>
 #include <time.h>
 #include <sys/time.h>
+
+#include "examples/examples_all.h"
 
 #define DISP_BUF_SIZE (800 * 480)
 
@@ -31,6 +32,8 @@ int main(void)
     disp_drv.flush_cb   = fbdev_flush;
     disp_drv.hor_res    = 800;
     disp_drv.ver_res    = 480;
+    disp_drv.sw_rotate  = 1;
+    disp_drv.rotated    = LV_DISP_ROT_180;
     lv_disp_drv_register(&disp_drv);
 
     evdev_init();
@@ -51,7 +54,7 @@ int main(void)
 
 
     /*Create a Demo*/
-    lv_demo_widgets();
+    example_obj();
 
     /*Handle LitlevGL tasks (tickless mode)*/
     while(1) {
