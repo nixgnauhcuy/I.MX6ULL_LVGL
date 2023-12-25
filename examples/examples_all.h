@@ -7,7 +7,7 @@ extern "C" {
 
 #include "lvgl/lvgl.h"
 
-void example_obj(void);
+void example_demo(void);
 
 #ifdef __cplusplus
 } /*extern "C"*/

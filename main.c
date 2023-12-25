@@ -54,7 +54,7 @@ int main(void)
 
 
     /*Create a Demo*/
-    example_obj();
+    example_demo();
 
     /*Handle LitlevGL tasks (tickless mode)*/
     while(1) {

@@ -24,7 +24,7 @@ static void btn_event_handler(lv_event_t* e)
     }
 }
 
-void example_obj(void)
+void example_demo(void)
 {
     lv_obj_t* obj1 = lv_obj_create(lv_scr_act());
     lv_obj_t* label = lv_label_create(obj1);

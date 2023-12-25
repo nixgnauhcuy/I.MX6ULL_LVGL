@@ -4,6 +4,7 @@
 CC 				= arm-linux-gnueabihf-gcc
 LVGL_DIR_NAME 	?= lvgl
 LVGL_DIR 		?= .
+EXAMPLE_TRAGE	?= 2_label
 EXAMPLE_DIR 	?= examples
 
 WARNINGS		:= -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers -Wall -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith \
@@ -16,7 +17,7 @@ WARNINGS		:= -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifie
 					-Wno-ignored-qualifiers -Wno-sign-compare -std=c99
 CFLAGS 			?= -O3 -g0 -I$(LVGL_DIR)/ $(WARNINGS)
 LDFLAGS 		?= -lm
-BIN 			= demo
+BIN 			= output
 BUILD_DIR 		= ./build
 BUILD_OBJ_DIR 	= $(BUILD_DIR)/obj
 BUILD_BIN_DIR 	= $(BUILD_DIR)/bin
