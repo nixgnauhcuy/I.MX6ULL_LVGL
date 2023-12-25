@@ -4,7 +4,7 @@
 CC 				= arm-linux-gnueabihf-gcc
 LVGL_DIR_NAME 	?= lvgl
 LVGL_DIR 		?= .
-EXAMPLE_TRAGE	?= 2_label
+EXAMPLE_TRAGE	?= 3_btn
 EXAMPLE_DIR 	?= examples
 
 WARNINGS		:= -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers -Wall -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith \

@@ -6,7 +6,7 @@
 #include <time.h>
 #include <sys/time.h>
 
-#include "examples/examples_all.h"
+#include "examples/examples.h"
 
 #define DISP_BUF_SIZE (800 * 480)
 

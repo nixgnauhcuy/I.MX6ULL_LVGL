@@ -1,28 +1,4 @@
-#include "../examples_all.h"
-
-static void btn_event_handler(lv_event_t* e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    static bool _flag = true;
-    static lv_obj_t* obj4;
-    static lv_obj_t* obj4_label;
-    
-    if (code == LV_EVENT_CLICKED) {
-        LV_LOG_USER("Clicked");
-        
-        if (_flag) {
-            obj4 = lv_obj_create(lv_scr_act());
-            lv_obj_set_size(obj4, 380, 220);
-            lv_obj_align(obj4, LV_ALIGN_BOTTOM_RIGHT, -10, -10);
-            obj4_label = lv_label_create(obj4);
-            lv_label_set_text(obj4_label, "obj4");
-        } 
-        else {
-            lv_obj_del(obj4);
-        }
-        _flag = !_flag;
-    }
-}
+#include "../examples.h"
 
 void example_demo(void)
 {

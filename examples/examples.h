@@ -1,5 +1,5 @@
-#ifndef EXAMPLES_ALL_H
-#define EXAMPLES_ALL_H
+#ifndef EXAMPLES_H
+#define EXAMPLES_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,4 +13,4 @@ void example_demo(void);
 } /*extern "C"*/
 #endif
 
-#endif /*EXAMPLES_ALL_H*/
+#endif /*EXAMPLES_H*/

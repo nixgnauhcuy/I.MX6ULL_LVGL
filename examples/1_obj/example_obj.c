@@ -1,4 +1,4 @@
-#include "../examples_all.h"
+#include "../examples.h"
 
 static void btn_event_handler(lv_event_t* e)
 {
