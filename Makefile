@@ -4,7 +4,7 @@
 CC 				= arm-linux-gnueabihf-gcc
 LVGL_DIR_NAME 	?= lvgl
 LVGL_DIR 		?= .
-EXAMPLE_TRAGE	?= 8_roller
+EXAMPLE_TRAGE	?= 9_slider
 EXAMPLE_DIR 	?= examples
 
 WARNINGS		:= -Wall -Wshadow -Wundef -Wmissing-prototypes -Wno-discarded-qualifiers -Wall -Wextra -Wno-unused-function -Wno-error=strict-prototypes -Wpointer-arith \
